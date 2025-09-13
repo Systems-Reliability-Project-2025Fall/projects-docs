@@ -42,12 +42,11 @@ Chapel Hill}\\
 
 \section{Introduction}
 
-scale 
-outage
-loss 
+Modern IT applications increasingly rely on large-scale, distributed architectures such as microservices and serverless computing. While these designs enable scalability and agility, they also introduce significant operational complexity. Failures are no longer isolated; instead, they cascade across dependent services, amplifying the blast radius of incidents. Even a short outage in hyperscale cloud platforms can result in losses of millions of dollars per hour, underscoring the critical importance of rapid detection, diagnosis, and recovery.
 
-response time  
+Traditionally, incident response has relied heavily on human operators such as Site Reliability Engineers (SREs) who iteratively observe telemetry, localize root causes, and execute mitigation actions. However, the growing scale and complexity of modern systems render manual operations increasingly slow, error-prone, and unsustainable. This motivates a paradigm shift toward \textit{AIOps}---the application of artificial intelligence to automate IT operations. Recent progress in large language models (LLMs) and agent-based architectures has pushed this vision further, enabling autonomous systems that can reason over telemetry, interact with cloud environments, and carry out multi-step incident management tasks.
 
+The long-term goal is to realize \textit{autonomous self-healing clouds}, where intelligent agents manage incidents end-to-end with minimal human involvement. Achieving this requires systematic evaluation of AIOps agents under realistic and diverse operational conditions. In this project, we focus on \textsc{AIOps}Lab, a holistic framework designed to benchmark and advance AI agents for cloud operations. By reproducing parts of its benchmark, evaluating state-of-the-art models, and extending its fault scenarios, we aim to gain deeper insights into the capabilities and limitations of current AIOps solutions and chart a path toward more robust autonomous operations.
 
 \section{Background}
 
