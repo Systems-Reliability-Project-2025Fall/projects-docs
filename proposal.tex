@@ -46,7 +46,8 @@ scale
 outage
 loss 
 
-responsive 
+response time  
+
 
 \section{Background}
 
@@ -54,11 +55,18 @@ responsive
 
 \subsection{Faults and incidents}
 
-\subsection{Compound AI Systems}
-Context length limit
+\subsection{Compound AI Systems(AI agents) and AIOps}
+Ideally, given a clear problem description, an LLM should be able to return an answer in one step, as is the case for numerous simple tasks. However, many real-world tasks require multi-step reasoning for 2 reasons: 
+        \begin{itemize}
+                \item The initial context is usually insufficient for tackling the task so the LLM needs to get more context information in the following steps  
+                \item Even if a complete context is available, a longer context increases the risk of hallucination and failure, and there is a limit on context length.
+        \end{itemize}
 
-\subsection{}
+        CloudOps is such a real-world task with insufficient initial context. Cloud faults are unpredictable in general, can be non-deterministic or latent. Human DevOps engineers or SREs(Site Reliability Engineer) detect, localize and mitigate cloud faults by observing and acting iteratively with tools. 
 
+        AIOps automates human reasoning with LLM reasoning, but the agent still carries out the task by observing and acting with tools in multiple steps.     
+
+        State-of-Art LLM agent architectures include ReAct\cite{yao2023reactsynergizingreasoningacting} and FLASH\cite{zhang2024flash}.
 
 \subsection{\textsc{AIOps}LAB}
 \textsc{AIOps}LAB\cite{chen2025aiopslab} is an extensible framework for evaluation of AIOps agents. 
