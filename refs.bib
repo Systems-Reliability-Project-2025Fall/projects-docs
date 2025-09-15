@@ -24,3 +24,21 @@ month = {October},
 abstract = {Recurring incidents, typically raised by system monitors, often occur repeatedly, demanding significant human effort for troubleshooting. Automating the diagnosis process for these recurring incidents is crucial for minimizing service downtime, reducing customer impact, and decreasing manual labor. While recent agent approaches based on Large Language Models (LLMs) have demonstrated effectiveness in handling complex tasks requiring multiple logical steps, they still suffer from the reliability issue due to a lack of specific diagnostic knowledge. To enhance diagnostic reliability, we propose a workFLow Automation agent with Status supervision and Hindsight integration (FLASH), which significantly improves diagnostic accuracy by incorporating status supervision to break down the complex instructions into manageable pieces aligned with identified status. Moreover, we generate hindsight using LLMs from past failure experiences, progressively enhancing diagnostic reliability for subsequent incidents. We conduct extensive study over 250 production incidents from Microsoft in five different workflow automation scenarios. The results reveal that our FLASH agent approach outperforms state-of-the-art agent models by an average of 13.2% in terms of accuracy. These compelling results underscore the viability of automating the diagnostic process for recurring incidents.},
 url = {https://www.microsoft.com/en-us/research/publication/flash-a-workflow-automation-agent-for-diagnosing-recurring-incidents/},
 }
+
+@INPROCEEDINGS {10646977,
+author = { Barletta, Marco and Cinque, Marcello and Di Martino, Catello and Kalbarczyk, Zbigniew T. and Iyer, Ravishankar K. },
+booktitle = { 2024 54th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN) },
+title = {{ Mutiny! How Does Kubernetes Fail, and What Can We Do About It? }},
+year = {2024},
+volume = {},
+ISSN = {},
+pages = {1-14},
+abstract = { In this paper, we i) analyze and classify real-world failures of Kubernetes (the most popular container orchestration system), ii) develop a framework to perform a fault/error injection campaign targeting the data store preserving the cluster state, and iii) compare results of our fault/error injection experiments with real-world failures, showing that our fault/error injections can recreate many real-world failure patterns. The paper aims to address the lack of studies on systematic analyses of Kubernetes failures to date. Our results show that even a single fault/error (e.g., a bit-flip) in the data stored can propagate, causing cluster-wide failures (3% of injections), service networking issues (4%), and service under/overprovisioning (24%). Errors in the fields tracking dependencies between object caused 51% of such cluster-wide failures. We argue that controlled fault/error injection-based testing should be employed to proactively assess Kubernetes' resiliency and guide the design of failure mitigation strategies. },
+keywords = {Analytical models;Systematics;Prevention and mitigation;Containers;Monitoring;Resilience;Testing},
+doi = {10.1109/DSN58291.2024.00016},
+url = {https://doi.ieeecomputersociety.org/10.1109/DSN58291.2024.00016},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month =Jun}
+
+
