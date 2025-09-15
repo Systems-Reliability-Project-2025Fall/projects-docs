@@ -50,9 +50,16 @@ The long-term goal is to realize \textit{autonomous self-healing clouds}, where 
 
 \section{Background}
 
-\subsection{Clouds}
+\subsection{Cloud, Microservices And Kubernetes}
+Cloud-native services increasingly adopt microservices packaged as containers and orchestrated for reliability and scale. Kubernetes (K8s) provides declarative control and reconciliation—Pods run application containers; ReplicaSets and Deployments manage replica count and rolling updates; Services expose stable endpoints—while the control plane (etcd, API server, scheduler, controller manager) coordinates cluster state; kubelet and kube-proxy run per node. Labels/annotations bind resources and drive routing/selection across components. 
 
-\subsection{Faults and incidents}
+K8s resilience comes from stateless components, leader election, backoffs, and level-triggered reconciliation of desired vs.\ observed state; however, this design centralizes state consistency in etcd and the API server. In practice, teams pair this with rich observability—metrics, traces, and logs—to operate distributed services at scale.
+
+\subsection{Faults and Incidents}
+Operational incidents typically progress through four stages: \emph{detection}, \emph{triage}, \emph{diagnosis/root cause analysis}, and \emph{mitigation}. Evaluations commonly track task success and time-based metrics such as Time-to-Detect (TTD) and Time-to-Mitigate (TTM) \cite{chen2025aiopslab}. 
+
+Real-world and injected-fault studies \cite{10646977} show K8s failures cluster into timing delays, resource mis-allocation (less/more than intended), service networking errors, cluster stalls, and cluster-wide outages. Notably, even a \emph{single} bad state value can propagate to overloads or outages; in one large campaign: $\sim$3\% cluster-wide failures, $\sim$24\% under/over-provisioning, and $\sim$4\% service-network issues were observed. Dependency/label errors accounted for 51\% of critical failures, and commonplace misconfigurations readily saturated resources; many errors escaped monitoring until they manifested as failures—underscoring the need to log/guard label changes and to instrument alerts that track convergence of desired vs.\ observed state.
+
 
 \subsection{Compound AI Systems(AI agents) and AIOps}
 Ideally, given a clear problem description, an LLM should be able to return an answer in one step, as is the case for numerous simple tasks. However, many real-world tasks require multi-step reasoning for 2 reasons: 
