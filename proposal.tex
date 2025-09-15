@@ -21,12 +21,12 @@ kosumi@cs.unc.edu
 % City, Country \\
 % }
 \and
-\IEEEauthorblockN{Chai}
+\IEEEauthorblockN{Chaitanya}
 %\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
 \textit{The University of North Carolina at
 Chapel Hill}\\
 %City, Country \\
-@cs.unc.edu}
+chaitany@cs.unc.edu}
 
 \maketitle
 
@@ -89,6 +89,13 @@ This step ensures that our setup of the AIOpsLab aligns well with the setup in t
 
 Estimated timeline: finish before October. 
 \subsection{Evaluate State-of-Art models and the impact of thinking budget}
+Ownership: Chaitanya
+
+We will benchmark closed-source models (ChatGPT~5, Gemini~2.5~Pro) and open-source models if time permits (DeepSeek-R1 or LLaMA~4) as agents across the incident lifecycle—\emph{detection, localization, root-cause analysis (RCA), mitigation}.
+
+\textbf{Thinking budget (step/compute budget).} We will parameterize each agent’s maximum decision horizon $K$ (allowed action/observation steps) and per-step token ceiling, and study accuracy–latency–cost tradeoffs. Prior evidence shows performance can improve with more steps for some agents, plateauing near $K\!\approx\!15$–$20$; for other models, larger $K$ mainly increases tokens without accuracy gains—motivating careful budget tuning.
+
+Estimated timeline: finish before October. 
 \subsection{Construct new faults that are closer to real-world settings}
 Ownership: both 
 
