@@ -80,14 +80,21 @@ Ideally, given a clear problem description, an LLM should be able to return an a
 AIOpsLab integrates multiple components, including a workload generator, extensible fault library, telemetry collectors, and an orchestrator that provides a unified \textbf{Agent-Cloud Interface (ACI)}. This design enables agents to interact dynamically with cloud environments, perform tasks such as detection, localization, root-cause analysis, and mitigation, and receive structured feedback. By offering benchmark problems across diverse operational scenarios, AIOpsLab serves as a testbed for evaluating state-of-the-art LLM-based agents.
 
 \section{Project tasks}
-
 \subsection{Partial Reproduction of AIOpsLab benchmark}
+Ownership: Kangcheng Chen
+
+This part aims to reproduce part of table 4(agent performance by task) in the AIOPsLab paper. We plan to do this for 3 agents: GPT-4-W-SHELL, ReAct and FLASH and for at least 2 tasks.
+
+This step ensures that our setup of the AIOpsLab aligns well with the setup in the paper.
+
+Estimated timeline: finish before October. 
 \subsection{Evaluate State-of-Art models and the impact of thinking budget}
 \subsection{Construct new faults that are closer to real-world settings}
+Ownership: both 
 
+AIOpsLab has a set of simplified, isolated faults but how does an agent perform facing real-world systemic faults? We plan to introduce new faults to AIOPsLab inspired by production incidents and evaluate agent performance on them. If time permits, we may also add a new cloud application to the benchmark.
 
-
-
+Estimated timeline: finish before November. 
 
 
 \bibliography{refs}
