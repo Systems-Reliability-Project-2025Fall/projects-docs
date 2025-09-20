@@ -65,7 +65,7 @@ Real-world and injected-fault studies \cite{10646977} show K8s failures cluster 
 Ideally, given a clear problem description, an LLM should be able to return an answer in one step, as is the case for numerous simple tasks. However, many real-world tasks require multi-step reasoning for 2 reasons: 
         \begin{itemize}
                 \item The initial context is usually insufficient for tackling the task so the LLM needs to get more context information in the following steps  
-                \item Even if a complete context is available, a longer context increases the risk of hallucination and failure, and there is a limit on context length.
+                \item Even if a complete context is available, a longer context increases the risk of hallucination and failure, along with a super-linear growth in computation cost. On top of it, there is a limit on context length.
         \end{itemize}
 
         CloudOps is such a real-world task with insufficient initial context. Cloud faults are unpredictable in general, can be non-deterministic or latent. Human DevOps engineers or SREs(Site Reliability Engineer) detect, localize and mitigate cloud faults by observing and acting iteratively with tools. 
